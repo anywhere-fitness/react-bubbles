@@ -16,7 +16,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
     }
   }} />;
 };
-
+//private route component that renders  bubble page at bottom.
 const protectRoute = Component => props => {
   if (localStorage.getItem('token')) {
     return <Component {...props} />;

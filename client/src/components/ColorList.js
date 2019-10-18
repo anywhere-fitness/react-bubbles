@@ -6,7 +6,7 @@ const initialColor = {
   color: "",
   code: { hex: "" }
 };
-
+//reequest to server to add, delete etc 
 const ColorList = ({ colors, updateColors, getColors }) => {
   console.log(colors);
   const [editing, setEditing] = useState(false);
@@ -27,6 +27,7 @@ const ColorList = ({ colors, updateColors, getColors }) => {
     // make a delete request to delete this color
     event.preventDefault();
     axiosWithAuth()
+        //remives color using id passed
       .delete(`http://localhost:5000/api/colors/${colorToEdit.id}`)
       .then(res => {
         console.log(res)
@@ -39,6 +40,7 @@ const ColorList = ({ colors, updateColors, getColors }) => {
   const saveEdit = (event, colorToEdit) => {
     event.preventDefault();
     axiosWithAuth()
+        //updates color  and sends color object as updated info /body of the request.
       .put(`http://localhost:5000/api/colors/${colorToEdit.id}`, colorToEdit)
       .then(res => {
         console.log(res.data);
@@ -53,6 +55,7 @@ const ColorList = ({ colors, updateColors, getColors }) => {
 const addColor = (event, colorToAdd) => {
     event.preventDefault();
     axiosWithAuth()
+     //returns token to be added to header of other request.
         .post(`http://localhost:5000/api/colors/`, colorToAdd)
       .then(res => {
         console.log(res)

@@ -11,6 +11,7 @@ const BubblePage = ({history}) => {
   // set that data to the colorList state property
   const getColors = () => {
     axiosWithAuth()
+        //fetch request to obtain color for my bubbles
       .get('http://localhost:5000/api/colors')
       .then(res => {
         console.log(res)

@@ -1,0 +1,7 @@
+1.A token is used to authenticate the user and allow them to receieve specific information that is granted to them.
+
+2.To keep our data secure, we can use authentication to ensure the user has access to the requested information or data transfer.
+
+3.Web servers work by taking in a request, checking to see if that request is authorized, and returning the appropriate information regarding the request.
+
+4.Post, Get, Put, Delete are all mothods for interfacing with APIs/Servers.

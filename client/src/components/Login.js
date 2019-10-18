@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import '../styles.scss'
 
-function Login({ touched, errors }) {
+function Login({ touched, errors, values }) {
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
 
@@ -15,7 +15,7 @@ function Login({ touched, errors }) {
     <Form className="form">
       <h1>Welcome to the Bubble App!</h1>
           <div className="form-box">
-        <label className="label">Username</label>
+          <label className="label">Username   :</label>
         <Field
           className="input"
           name="username"
@@ -25,7 +25,7 @@ function Login({ touched, errors }) {
         <p>{touched.username && errors.username}</p>
       </div>
       <div className="form-box">
-        <label className="label">Password</label>
+      <label className="label">Password   :</label>
         <Field
           className="input"
           name="password"
@@ -37,6 +37,11 @@ function Login({ touched, errors }) {
       <button type="submit" className="btn">
         Submit &rarr;
       </button>
+      <label className="checkbox-container">
+            <div className= "tos" >    
+            <Field type="checkbox" name="tos" checked={values.tos} /> <p>Do you accept our terms of services?</p>  
+             </div>
+            </label>
     </Form>
   );
   }
@@ -70,5 +75,4 @@ function Login({ touched, errors }) {
     }
   })(Login);
 
-export default Login;
-s
+
