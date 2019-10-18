@@ -76,11 +76,12 @@ form {
   label {
     display: flex;
     justify-content: space-between;
-    padding: 4px 36px 4px 40px;
+    // padding: 4px 36px 4px 30px;
   }
 
   input {
-    width: 100px;
+    width: 200px;
+    margin-bottom: 30px;
   }
 }
 
@@ -96,4 +97,64 @@ form {
     padding: 3px 8px;
     margin-top: 16px;
   }
+}
+.btn {
+  border-radius: 5px;
+  padding: 15px 15px;
+  font-family: inherit;
+  background-color: #263238;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #34495E;
+}
+
+.form-box{
+ background-color: rgb(221, 215, 215);
+//  border:2px solid red;
+
+ display:flex;
+ justify-content: space-evenly;
+ padding:10px;
+
+
+ 
+}
+.form{
+  // background-color:rgb(163, 163, 163);
+  margin:0 auto;
+  padding:10px;
+  height:47%;
+  width:30%;
+  margin-top:30px;
+  border-radius:30px;
+}
+.form h1{
+  background-color:rgb(5, 170, 41);
+  color:white;
+  padding:10px;
+  border-radius:10px;
+}
+.label{
+  color:blue;
+  margin-left:20px;
+  margin-top:20px;
+}
+input{
+  margin-top:20px;
+}
+.tos{
+  display:flex;
+  align-items: center;
+}
+.checkbox-container{
+  background-color:white;
+}
+.checkbox-container p{
+  color:rgb(22, 22, 20);;
 }
