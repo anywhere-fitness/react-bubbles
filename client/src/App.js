@@ -12,7 +12,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
     if (localStorage.getItem('token')) {
       return <Component {...props} />;
     } else {
-      return <Redirect to="/login" />;
+      return <Redirect to="/" />;
     }
   }} />;
 };
@@ -21,7 +21,7 @@ const protectRoute = Component => props => {
   if (localStorage.getItem('token')) {
     return <Component {...props} />;
   } else {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
 };
 
@@ -38,6 +38,7 @@ function App() {
           display BubblePage when you're authenticated 
           
         */}
+
          <Route path="/bubblepage" component={ProtectedBubblePage}/>
       </div>
    
